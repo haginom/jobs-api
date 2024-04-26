@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 //verify token and check if everything is ok
 const authenticationMiddleware = async (req, res, next) => {
   const authHeader = req.headers.authorization;
-  console.log(err);
+
   if (!authHeader || !authHeader.startsWith("Bearer")) {
     return res
       .status(401)
